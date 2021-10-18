@@ -63,35 +63,24 @@
                     index++;
                 }
 
-                butt1.addEventListener("click", handler1); // Thanks!
-                butt2.addEventListener("click", handler2); // Thanks again!
-                butt3.addEventListener("click", handler3); // Thanks again!
-                butt4.addEventListener('click', (event)=>{
-                    if (event.target.classList.contains('start')){
+                butt1.addEventListener("click", handler1);
+                butt2.addEventListener("click", handler2);
+                butt3.addEventListener("click", handler3);
+                butt4.addEventListener('click', (event)=> {
+
+                    if (event.target.classList.contains('start')) {
                         event.target.innerHTML = 'STOP';
                         butt4.value = 'START';
                         clearInterval(interval)
                     } else {
                         event.target.innerHTML = 'START';
                         butt4.value = 'STOP';
-                        interval = setInterval(()=>{
+                        interval = setInterval(()=> {
                             Slider.nextSlide();
                         },1000)
                     }
                     event.target.classList.toggle('start')
                 })
-                // butt5.setSlide(2);
-                //
-                // let asd = document.querySelectorAll("buttons1");
-                // asd.forEach(()=> (event) => {
-                //
-                // }).addEventListener("click", ()=> {
-                //     console.log("good index" + good_index)
-                //     console.log("indexx" + indexx)
-                //     while (good_index !== this.current)
-                //         this.nextSlide();
-                //
-                // });
             </script>
             </p>
             <p id = "rrr">
